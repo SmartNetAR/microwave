@@ -11,21 +11,16 @@ char* IdleOpenDoorState::GetName() {
 }
 
 bool IdleOpenDoorState::Open() {
-	Door = OPEN;
-	light.setOn();
 	return true;
 }
 
 bool IdleOpenDoorState::Close() {
-	Door = CLOSE;
-	light.setOff();
-	//change state to IdleState
 	return true;
 }
 
-bool IdleOpenDoorState::IsLightOn() {
-	return light.IsOn();
-}
+/*bool IdleOpenDoorState::IsLightOn() {
+	//return light.IsOn();
+}*/
 
 IdleOpenDoorState::~IdleOpenDoorState()
 {

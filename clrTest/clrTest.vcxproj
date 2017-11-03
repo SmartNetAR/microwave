@@ -135,22 +135,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="components\Light.cpp" />
     <ClCompile Include="IdleOpenDoorState.cpp" />
     <ClCompile Include="IdleState.cpp" />
     <ClCompile Include="IState.cpp" />
-    <ClCompile Include="Light.cpp" />
     <ClCompile Include="Microwave.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="components\Light.h" />
     <ClInclude Include="IdleOpenDoorState.h" />
     <ClInclude Include="IdleState.h" />
     <ClInclude Include="IState.h" />
-    <ClInclude Include="Light.h" />
     <ClInclude Include="Microwave.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="StateMachine.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">

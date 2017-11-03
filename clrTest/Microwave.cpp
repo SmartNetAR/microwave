@@ -13,21 +13,28 @@ Microwave::~Microwave()
 
 char* Microwave::GetStateName() 
 {
-	return currentState->GetName();
+	return stMachine.State()->GetName();
+
 }
 
 void Microwave::OpenDoor() {
+	stMachine.OpenDoor();
 	//cambio de estado manual. MAL!
+	/*delete currentState;
 	currentState = new(IdleOpenDoorState);
-	currentState->Open();
+	light.setOn();
+	currentState->Open();*/
 }
 
 void Microwave::CloseDoor() {
+	stMachine.CloseDoor();
+	/*
 	//cambio de estado manual. MAL!
 	currentState = new(IdleState);
 	currentState->Close();
+	*/
 }
 
 bool Microwave::IsLightOn(){
-	return currentState->IsLightOn();
+	return light.IsOn();
 }
