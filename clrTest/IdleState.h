@@ -7,7 +7,7 @@ public:
 	~IdleState();
 	virtual char* IState::GetName();
 	virtual bool IState::Open();
-	virtual bool IState::Close();	 //do nothing
+	virtual bool IState::Close();
 	virtual bool IState::PressButton();
 
 private:

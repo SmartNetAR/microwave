@@ -1,9 +1,6 @@
 #include "IdleState.h"
 
-
-
-IdleState::IdleState()
-{
+IdleState::IdleState() {
 	nameState = "Idle with the door Closed";
 }
 
@@ -23,6 +20,5 @@ bool IdleState::PressButton() {
 	return true;
 }
 
-IdleState::~IdleState()
-{
+IdleState::~IdleState() {
 }

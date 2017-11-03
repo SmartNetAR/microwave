@@ -6,8 +6,7 @@
 
 enum eventOcurred { buttonPushed, timeOut, doorOpened, doorClosed };
 
-class StateMachine
-{
+class StateMachine {
 public:
 	StateMachine();
 	~StateMachine();
@@ -17,12 +16,10 @@ public:
 	void PressButton();
 private:
 	IState* currentState;
-	struct stateS
-	{
-		int event;
+	struct stateS {
+		eventOcurred event;
 		int prevState;
 		int currentState;
-		int nextState;
 	}listStates;
 	void SetCurrentState(IState* newCurrenState);
 	void ChangeState(eventOcurred newEvent);

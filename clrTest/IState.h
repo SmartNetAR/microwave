@@ -1,9 +1,7 @@
 using namespace System;
 
-
 #pragma once
-class IState
-{
+class IState {
 public:
 	virtual char* GetName() = 0;
 	virtual bool Open() = 0;

@@ -167,16 +167,16 @@ namespace clrTest {
 
 		}
 #pragma endregion
-		void RefreshControls() {
-			String^ strNew = gcnew String(mw->GetStateName());
-			this->lblState->Text = strNew;
-			if (mw->IsLightOn()) {
-				lblLight->Text = "On";
-			}
-			else {
-				lblLight->Text = "Off";
-			}
+	void RefreshControls() {
+		String^ strNew = gcnew String(mw->GetStateName());
+		this->lblState->Text = strNew;
+		if (mw->IsLightOn()) {
+			lblLight->Text = "On";
 		}
+		else {
+			lblLight->Text = "Off";
+		}
+	}
 	private: System::Void btnOpen_Click(System::Object^  sender, System::EventArgs^  e) {
 		mw->OpenDoor();
 		RefreshControls();
@@ -188,9 +188,9 @@ namespace clrTest {
 		mw->CloseDoor();
 		RefreshControls();
 	}
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-	mw->PressButton();
-	RefreshControls();
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		mw->PressButton();
+		RefreshControls();
 }
 };
 }
