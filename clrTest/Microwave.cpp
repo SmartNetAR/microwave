@@ -28,11 +28,11 @@ void Microwave::OpenDoor() {
 
 void Microwave::CloseDoor() {
 	stMachine.CloseDoor();
-	/*
-	//cambio de estado manual. MAL!
-	currentState = new(IdleState);
-	currentState->Close();
-	*/
+}
+
+void Microwave::PressButton()
+{
+	stMachine.PressButton();
 }
 
 bool Microwave::IsLightOn(){

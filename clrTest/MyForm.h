@@ -46,6 +46,7 @@ namespace clrTest {
 	private: System::Windows::Forms::Button^  btnRefresh;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  lblLight;
+	private: System::Windows::Forms::Button^  button1;
 
 	protected:
 
@@ -69,6 +70,7 @@ namespace clrTest {
 			this->btnRefresh = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->lblLight = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btnOpen
@@ -83,9 +85,9 @@ namespace clrTest {
 			// 
 			// btnClose
 			// 
-			this->btnClose->Location = System::Drawing::Point(211, 77);
+			this->btnClose->Location = System::Drawing::Point(211, 75);
 			this->btnClose->Name = L"btnClose";
-			this->btnClose->Size = System::Drawing::Size(99, 45);
+			this->btnClose->Size = System::Drawing::Size(99, 47);
 			this->btnClose->TabIndex = 1;
 			this->btnClose->Text = L"Close";
 			this->btnClose->UseVisualStyleBackColor = true;
@@ -135,11 +137,22 @@ namespace clrTest {
 			this->lblLight->Size = System::Drawing::Size(0, 13);
 			this->lblLight->TabIndex = 6;
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(211, 159);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(99, 44);
+			this->button1->TabIndex = 7;
+			this->button1->Text = L"Cook";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(467, 254);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->lblLight);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->btnRefresh);
@@ -175,5 +188,9 @@ namespace clrTest {
 		mw->CloseDoor();
 		RefreshControls();
 	}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	mw->PressButton();
+	RefreshControls();
+}
 };
 }

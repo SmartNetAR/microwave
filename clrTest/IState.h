@@ -8,5 +8,6 @@ public:
 	virtual char* GetName() = 0;
 	virtual bool Open() = 0;
 	virtual bool Close() = 0;
+	virtual bool PressButton() = 0;
 };
 

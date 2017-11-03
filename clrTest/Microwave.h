@@ -18,6 +18,7 @@ public:
 	char* GetStateName();
 	void OpenDoor();
 	void CloseDoor();
+	void PressButton();
 	bool IsLightOn();
 };
 

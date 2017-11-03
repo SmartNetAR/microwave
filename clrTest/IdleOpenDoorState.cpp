@@ -1,8 +1,6 @@
 #include "IdleOpenDoorState.h"
 
-
-IdleOpenDoorState::IdleOpenDoorState()
-{
+IdleOpenDoorState::IdleOpenDoorState() {
 	nameState = "Idle with the door Open";
 }
 
@@ -18,10 +16,9 @@ bool IdleOpenDoorState::Close() {
 	return true;
 }
 
-/*bool IdleOpenDoorState::IsLightOn() {
-	//return light.IsOn();
-}*/
+bool IdleOpenDoorState::PressButton() {
+	return true;
+}
 
-IdleOpenDoorState::~IdleOpenDoorState()
-{
+IdleOpenDoorState::~IdleOpenDoorState() {
 }

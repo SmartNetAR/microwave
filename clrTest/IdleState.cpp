@@ -19,10 +19,9 @@ bool IdleState::Close() {
 	return true;
 }
 
-/*bool IdleState::IsLightOn() {
-	return light.IsOn();
-}*/
-
+bool IdleState::PressButton() {
+	return true;
+}
 
 IdleState::~IdleState()
 {

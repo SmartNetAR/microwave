@@ -8,6 +8,7 @@ public:
 	virtual char* IState::GetName();
 	virtual bool IState::Open();
 	virtual bool IState::Close();	 //do nothing
+	virtual bool IState::PressButton();
 
 private:
 	char* nameState;

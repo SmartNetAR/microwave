@@ -39,6 +39,9 @@
     <ClCompile Include="StateMachine.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="InitialCookingPeriodState.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -60,6 +63,9 @@
       <Filter>Archivos de encabezado\components</Filter>
     </ClInclude>
     <ClInclude Include="StateMachine.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="InitialCookingPeriodState.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

@@ -138,6 +138,7 @@
     <ClCompile Include="components\Light.cpp" />
     <ClCompile Include="IdleOpenDoorState.cpp" />
     <ClCompile Include="IdleState.cpp" />
+    <ClCompile Include="InitialCookingPeriodState.cpp" />
     <ClCompile Include="IState.cpp" />
     <ClCompile Include="Microwave.cpp" />
     <ClCompile Include="MyForm.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="components\Light.h" />
     <ClInclude Include="IdleOpenDoorState.h" />
     <ClInclude Include="IdleState.h" />
+    <ClInclude Include="InitialCookingPeriodState.h" />
     <ClInclude Include="IState.h" />
     <ClInclude Include="Microwave.h" />
     <ClInclude Include="MyForm.h">
