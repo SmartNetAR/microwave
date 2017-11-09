@@ -16,9 +16,9 @@ IState * StateMachine::State() {
 	return currentState;
 }
 
-void StateMachine::OpenDoor() {
+void StateMachine::OpenDoor(void(*pfunc)()) {
 	ChangeState(doorOpened);
-	currentState->Open();
+	//currentState->Open( );
 }
 
 void StateMachine::CloseDoor() {
@@ -39,8 +39,31 @@ void StateMachine::SetCurrentState( IState* newCurrentState){
 	currentState = newCurrentState;
 }
 
+void setLightOn(void) {
+
+}
+void setLightOff(void) {
+
+}
+
+void powerOnTube(void) {
+
+}
+
+TEventState mapping[] = {
+		{ buttonPushed, setLightOn,  }
+	,	{ doorOpened,   setLightOn }
+	,	{ doorClosed,   setLightOff }
+	,	{ nothing,		0 }
+}; 
+
 void StateMachine::ChangeState(eventOcurred newEvent) {
 	listStates.event = newEvent;
+	TEventState *next = mapping;
+	while (next->eventO != nothing) {
+		next->paction();
+		++next;
+	}
 	switch (newEvent) {
 	case buttonPushed:
 		if (listStates.currentState == 1) {

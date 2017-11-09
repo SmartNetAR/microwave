@@ -15,7 +15,12 @@ char* Microwave::GetStateName() {
 }
 
 void Microwave::OpenDoor() {
-	stMachine.OpenDoor();
+	//light.setOn();
+	void (Light::*oSetOn)(void);
+	oSetOn = &Light::setOn;
+	(light.*oSetOn)();
+
+	//stMachine.OpenDoor( );
 }
 
 void Microwave::CloseDoor() {

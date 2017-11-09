@@ -4,7 +4,8 @@ using namespace System;
 class IState {
 public:
 	virtual char* GetName() = 0;
-	virtual bool Open() = 0;
+	//virtual bool Open(void(*pfunc)()) = 0;
+	virtual bool Open(void (*oSetOn)(void)) = 0;
 	virtual bool Close() = 0;
 	virtual bool PressButton() = 0;
 };

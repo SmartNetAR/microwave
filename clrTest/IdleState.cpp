@@ -8,7 +8,7 @@ char* IdleState::GetName() {
 	return nameState;
 }
 
-bool IdleState::Open() {
+bool IdleState::Open(void(*pfunc)()) {
 	return true;
 }
 

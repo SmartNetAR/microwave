@@ -11,7 +11,7 @@ char* InitialCookingPeriodState::GetName() {
 	return nameState;
 }
 
-bool InitialCookingPeriodState::Open() {
+bool InitialCookingPeriodState::Open(void(*pfunc)()) {
 	return true;
 }
 
